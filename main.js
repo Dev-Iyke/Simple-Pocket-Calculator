@@ -14,7 +14,8 @@ function clearOutput(){
 }
 function showResult(){
     try{
-        output.textContent = eval(output.textContent)
+        const result = eval(output.textContent)
+        output.textContent =  result.toFixed(5)
     }
     catch(error){
         output.textContent = 'Syntax Error';
